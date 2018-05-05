@@ -2,22 +2,25 @@
   "development": {
     "username": "inovaagro",
     "password": "ZT*wLd.Ai6E5",
-    "database": "database_development",
+    "database": "inovaagro",
     "host": "mysql642.umbler.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port":"41890"
   },
   "test": {
     "username": "inovaagro",
     "password": "ZT*wLd.Ai6E5",
-    "database": "database_development",
+    "database": "inovaagro",
     "host": "mysql642.umbler.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port":"41890"
   },
   "production": {
     "username": "inovaagro",
     "password": "ZT*wLd.Ai6E5",
-    "database": "database_development",
+    "database": "inovaagro",
     "host": "mysql642.umbler.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port":"41890"
   }
 }
