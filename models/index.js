@@ -11,18 +11,12 @@ var db = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  console.log(config);
   var sequelize = new Sequelize(
     config.database,
     config.username,
     config.password,
     {
-      username: config.username,
-      password: config.password,
-      database: config.database,
-      host: 'mysql642.umbler.com',
-      dialect: 'mysql',
-      port: '41890',
+      ...config,
       define: {
         timestamps: false,
         freezeTableName: true
