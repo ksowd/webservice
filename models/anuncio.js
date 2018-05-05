@@ -3,13 +3,13 @@ module.exports =  (sequelize, types) => {
     function associate(models){
         const {
             tipo_negocio,
-            produto,
+            categoria,
             usuario,
             anuncio
         } = models;
 
-        anuncio.belongsTo(produto,{
-            foreignKey: 'produto_id',
+        anuncio.belongsTo(categoria,{
+            foreignKey: 'categoria_id',
         });
         console.log(models)
         anuncio.belongsTo(tipo_negocio,{
@@ -27,9 +27,17 @@ module.exports =  (sequelize, types) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        ativo:  types.BOOLEAN,
+        ativo: {
+            type: types.BOOLEAN,
+            defaultValue: true,
+        },
+        nome: {
+            type: types.STRING(200),
+        },
+        
         descricao: types.STRING(200)
-      })
+     
+    })
       
       Model.associate = associate;
       return Model;
