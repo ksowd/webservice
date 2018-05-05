@@ -1,5 +1,8 @@
 module.exports =  (sequelize, types) => {
-    let Model =  sequelize.define("categoria", {
+    function associate() {
+
+    }
+    let Model =  sequelize.define("tipo_negocio", {
         id: {
             type: types.INTEGER,
             primaryKey: true,
@@ -8,6 +11,7 @@ module.exports =  (sequelize, types) => {
         descricao: types.STRING(200)
       })
 
+      Model.associate = associate;
       return Model;
 };
 
